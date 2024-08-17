@@ -603,6 +603,7 @@ img {
 .icon:hover {
   transform: scale(1.1);
   box-shadow: 0 0 25px rgba(0, 200, 255, 0.8); /* Accentuation de l'effet au survol */
+  
 }/* ===== EDUCATION ===== */
 .education {
   padding: 2rem 0;
@@ -633,6 +634,90 @@ img {
   position: relative;
   overflow: hidden;
 }
+
+
+/* Further adjustments for very small screens (e.g., iPhone SE or similar) */
+@media (max-width: 360px) {
+  .education__title {
+    font-size: 1rem;
+  }
+
+  .education__school {
+    font-size: 0.9rem;
+  }
+
+  .education__text {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .education__container {
+    padding: 0 0.25rem;
+  }
+}
+
+/* Make sure the body does not hide overflow */
+body {
+  overflow-x: auto; /* Allows horizontal scrolling if necessary */
+}
+
+/* Ensure that the container does not overflow */
+.education__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 100%; /* Allow the container to use full width of the screen */
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow-x: auto; /* Enables scrolling if content overflows */
+  box-sizing: border-box;
+}
+
+/* Ensure each grid item can shrink if needed */
+.education__content {
+  min-width: 0; /* Allow the content to shrink below its natural width */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .education__title {
+    font-size: 1.4rem;
+  }
+
+  .education__school {
+    font-size: 1.1rem;
+  }
+
+  .education__text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .education__container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education__title {
+    font-size: 1.2rem;
+  }
+
+  .education__school {
+    font-size: 1rem;
+  }
+
+  .education__text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .education__container {
+    padding: 0 0.5rem;
+    grid-template-columns: 1fr; /* Stack the items vertically on very small screens */
+  }
+}
+
 
 .education__content::before {
   content: '';

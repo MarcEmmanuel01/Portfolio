@@ -413,29 +413,41 @@ img {
 .contact__button:hover {
   background-color: #2980b9; /* Couleur plus foncée au survol */
 }
-
-/* ===== FOOTER =====*/
+/* ===== FOOTER ===== */
 .footer {
-  background-color: var(--second-color);
+  background-color: #000; /* Fond noir */
   color: #fff;
   text-align: center;
-  font-weight: var(--font-semi);
+  font-weight: 600; /* Rend le texte plus visible */
   padding: 2rem 0;
+  position: relative;
 }
+
 .footer__title {
-  font-size: 2rem;
-  margin-bottom: var(--mb-4);
+  font-size: 2.5rem; /* Augmentation de la taille pour plus d'impact */
+  margin-bottom: 1.5rem;
+  font-family: 'Arial', sans-serif;
 }
+
 .footer__social {
-  margin-bottom: var(--mb-4);
+  margin-bottom: 1.5rem;
 }
+
 .footer__icon {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Augmentation de la taille des icônes pour plus de visibilité */
   color: #fff;
-  margin: 0 var(--mb-2);
+  margin: 0 1rem; /* Espace augmenté entre les icônes */
+  transition: color 0.3s ease; /* Transition douce pour l'effet de survol */
 }
+
+.footer__icon:hover {
+  color: #3498db; /* Changement de couleur des icônes au survol */
+}
+
 .footer__copy {
-  font-size: var(--smaller-font-size);
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  opacity: 0.8; /* Ajoute une légère transparence pour un effet plus subtil */
 }
 
 /* ===== MEDIA QUERIES=====*/
@@ -591,8 +603,7 @@ img {
 .icon:hover {
   transform: scale(1.1);
   box-shadow: 0 0 25px rgba(0, 200, 255, 0.8); /* Accentuation de l'effet au survol */
-}
-/*===== EDUCATION =====*/
+}/* ===== EDUCATION ===== */
 .education {
   padding: 2rem 0;
 }
@@ -605,10 +616,11 @@ img {
 
 .education__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem; /* Ajout de padding pour les petits écrans */
 }
 
 .education__content {
@@ -688,6 +700,46 @@ img {
   z-index: 1;
   line-height: 1.6;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .education__title {
+    font-size: 1.4rem;
+  }
+
+  .education__school {
+    font-size: 1.1rem;
+  }
+
+  .education__text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .education__container {
+    padding: 0 1rem; /* Ajout de padding pour éviter que le contenu ne touche les bords */
+  }
+}
+
+@media (max-width: 480px) {
+  .education__title {
+    font-size: 1.2rem;
+  }
+
+  .education__school {
+    font-size: 1rem;
+  }
+
+  .education__text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .education__container {
+    padding: 0 0.5rem; /* Réduction du padding pour les très petits écrans */
+  }
+}
+
 /*===== HEADER =====*/
 .l-header {
     width: 100%;
@@ -973,3 +1025,28 @@ img {
 }
 
 
+.home__social {
+  display: flex; /* Utiliser Flexbox pour l'alignement */
+  justify-content: center; /* Centre les icônes horizontalement */
+  gap: 1rem; /* Espace entre les icônes */
+}
+
+.home__social-icon {
+  font-size: 2rem; /* Taille des icônes */
+  color: #fff; /* Couleur des icônes */
+  transition: color 0.3s ease; /* Transition pour un effet de survol */
+}
+
+.home__social-icon:hover {
+  color: #3498db; /* Change la couleur au survol */
+}
+
+@media (max-width: 480px) {
+  .home__social {
+      gap: 0.5rem; /* Réduire l'espacement entre les icônes pour les petits écrans */
+  }
+
+  .home__social-icon {
+      font-size: 1.8rem; /* Réduire légèrement la taille des icônes sur les très petits écrans */
+  }
+}

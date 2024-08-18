@@ -592,7 +592,7 @@ img {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 200, 255, 0.8); /* Ajout du fond bleu */
+  box-shadow: 0 0 15px rgba(101, 162, 233, 0.8); /* Ajout du fond bleu */
 }
 
 .icon img {
@@ -602,7 +602,7 @@ img {
 
 .icon:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(0, 200, 255, 0.8); /* Accentuation de l'effet au survol */
+  box-shadow: 0 0 25px rgba(101, 162, 233, 0.8); /* Accentuation de l'effet au survol */
   
 }/* ===== EDUCATION ===== */
 .education {
@@ -625,7 +625,7 @@ img {
 }
 
 .education__content {
-  background-color: #0d9dea;
+  background-color: #5899bc;
   color: #fff;
   padding: 1.5rem;
   border-radius: 0.5rem;
@@ -821,20 +821,20 @@ body {
   }
 
   .education__container {
-    padding: 0 0.5rem; /* Réduction du padding pour les très petits écrans */
+    padding: 0 0.5rem;
   }
 }
 
 /*===== HEADER =====*/
 .l-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
 }
 
 .nav {
@@ -945,12 +945,18 @@ body {
   background-color: #0056b3; /* Darker shade for hover effect */
 }
 
-
 .competences__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 20px;
+}
+
+/* Ajoutez cette media query pour les écrans de téléphone */
+@media (max-width: 768px) {
+  .competences__container {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
 }
 
 .competences__card {

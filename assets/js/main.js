@@ -60,9 +60,12 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
 
-// Ajouter un événement de clic sur l'icône de menu
-if(navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-}
+
+// Sélectionner les éléments nécessaires
+const toggle = document.getElementById('nav-toggle');
+const menu = document.getElementById('nav-menu');
+
+// Ajouter un écouteur d'événements pour le clic sur le bouton de menu
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('show-menu');
+});

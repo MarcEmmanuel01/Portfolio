@@ -123,44 +123,55 @@ img {
   align-items: center;
   font-weight: var(--font-semi);
 }
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
     top: var(--header-height);
     right: -100%;
     width: 80%;
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--second-color);
+    padding: 1rem;
+    background-color: #000; /* Fond noir */
     transition: 0.5s;
+    /* Ajustements pour un menu compact */
+    width: auto; /* Largeur ajustée */
+    height: auto; /* Hauteur ajustée */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    right: 10px; /* Positionnement à droite */
+  }
+
+  .nav__menu.show-menu {
+    right: 10px; /* Positionner à droite quand visible */
+  }
+
+  .nav__list {
+    display: flex; /* Disposer les éléments */
+    flex-direction: column; /* Alignement en colonne */
+    gap: 1rem; /* Espacement entre les éléments */
+  }
+
+  .nav__item {
+    margin-bottom: 0; /* Pas de marge en bas pour alignement vertical */
+    text-align: left; /* Alignement du texte */
+  }
+
+  .nav__link {
+    color: #007bff; /* Texte en bleu */
+    font-size: 1rem; /* Taille de texte ajustée */
+  }
+
+  .nav__toggle {
+    color: #fff; /* Texte en blanc */
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 }
-.nav__item {
-  margin-bottom: var(--mb-4);
-}
-.nav__link {
-  position: relative;
-  color: #fff; /* Texte en blanc */
-}
-.nav__link:hover {
-  position: relative;
-}
-.nav__link:hover::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
-}
-.nav__logo {
-  color: #fff; /* Texte en blanc */
-}
-.nav__toggle {
-  color: #fff; /* Texte en blanc */
-  font-size: 1.5rem;
-  cursor: pointer;
+
+/* Ajout pour activer le menu compact sur clic */
+.nav__menu.show-menu {
+  display: block;
+  right: 10px; /* S'assurer qu'il se positionne correctement */
 }
 
 /*Active menu*/
@@ -1142,38 +1153,3 @@ body {
   }
 }
 
-
-/* Cacher le menu par défaut sur les petits écrans */
-.nav__menu {
-  display: none;
-}
-
-/* Styles spécifiques pour l'affichage mobile */
-@media screen and (max-width: 768px) {
-  .nav__menu {
-      display: none;
-      position: absolute;
-      top: 60px; /* Ajuste en fonction de la hauteur de ton header */
-      right: 0;
-      background-color: #000; /* Couleur de fond du menu */
-      width: 100%;
-      height: calc(100vh - 60px); /* Ajuste en fonction de la hauteur de ton header */
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      z-index: 1;
-  }
-
-  .nav__menu.active {
-      display: flex;
-  }
-
-  .nav__item {
-      margin: 20px 0;
-  }
-
-  .nav__toggle {
-      display: block;
-  }
-}

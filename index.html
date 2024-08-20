@@ -219,17 +219,18 @@
 </section>
 
         <!--===== CONTACT =====-->
-<section class="contact section" id="contact">
-    <h2 class="section-title">Contactez-moi</h2>
-
-    <div class="contact__container bd-grid">
-        <form action="" class="contact__form">
-            <input type="text" placeholder="Nom" class="contact__input" required>
-            <input type="email" placeholder="Email" class="contact__input" required>
-            <textarea placeholder="Message" class="contact__input" rows="10" required></textarea>
-            <input type="submit" value="Envoyer" class="contact__button button ">
-        </form>
-    </div>
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contactez-moi</h2>
+        
+            <form action="contact.php" method="POST" class="contact__form">
+                <input type="text" name="name" placeholder="Nom" class="contact__input" required>
+                <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                <textarea name="message" placeholder="Message" class="contact__input" rows="10" required></textarea>
+                <input type="submit" value="Envoyer" class="contact__button button">
+            </form>
+        </section>
+        
+    
 </section>
 
 

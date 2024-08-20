@@ -129,12 +129,10 @@ img {
     position: fixed;
     top: var(--header-height);
     right: -100%;
-    width: 80%;
-    padding: 1rem;
+    width: auto;
+    padding: 0.2rem; /* Padding très réduit */
     background-color: #000; /* Fond noir */
     transition: 0.5s;
-    /* Ajustements pour un menu compact */
-    width: auto; /* Largeur ajustée */
     height: auto; /* Hauteur ajustée */
     border-radius: 8px; /* Coins arrondis */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
@@ -146,9 +144,9 @@ img {
   }
 
   .nav__list {
-    display: flex; /* Disposer les éléments */
+    display: flex;
     flex-direction: column; /* Alignement en colonne */
-    gap: 1rem; /* Espacement entre les éléments */
+    gap: 0.01rem; /* Espacement minimal entre les éléments */
   }
 
   .nav__item {
@@ -158,7 +156,9 @@ img {
 
   .nav__link {
     color: #007bff; /* Texte en bleu */
-    font-size: 1rem; /* Taille de texte ajustée */
+    font-size: 0.1rem; /* Taille du texte réduite */
+    padding: 0.01rem 0; /* Padding interne très réduit */
+    line-height: 0.05rem; /* Réduction de la hauteur de ligne */
   }
 
   .nav__toggle {
